@@ -20,8 +20,8 @@ from starlette.concurrency import run_in_threadpool
 # CONFIGURACION
 # ============================================================
 
-HVS_HOST = os.getenv("HVS_HOST", "192.168.0.7")
-HVS_PORT = int(os.getenv("HVS_PORT", "55"))
+HVS_HOST = os.getenv("HVS_HOST", "")
+HVS_PORT = int(os.getenv("HVS_PORT", ""))
 
 # IMPORTANTE: confirmar el terminador que requiere el equipo.
 HVS_COMMAND = os.getenv("HVS_COMMAND", "#HVS-STATUS\r\n").encode("ascii")
@@ -30,11 +30,11 @@ TCP_CONNECT_TIMEOUT = 5
 TCP_READ_TIMEOUT = 2
 MAX_RESPONSE_BYTES = 65536
 
-MYSQL_HOST = os.getenv("MYSQL_HOST", "192.168.0.98")
+MYSQL_HOST = os.getenv("MYSQL_HOST", "")
 MYSQL_PORT = int(os.getenv("MYSQL_PORT", "3306"))
-MYSQL_USER = os.getenv("MYSQL_USER", "digitel")
-MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "digit3L_")
-MYSQL_DATABASE = os.getenv("MYSQL_DATABASE", "irisdb")
+MYSQL_USER = os.getenv("MYSQL_USER", "")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "")
+MYSQL_DATABASE = os.getenv("MYSQL_DATABASE", "")
 
 TABLA = "digitel"
 
